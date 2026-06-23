@@ -20,12 +20,12 @@ jobs:
 
     steps:
       - name: Checkout image build repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: image-repo
 
       - name: Checkout upstream source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ env.UPSTREAM_REPOSITORY }}
           ref: main
@@ -38,7 +38,7 @@ jobs:
           echo "short_sha=$(git -C source rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
