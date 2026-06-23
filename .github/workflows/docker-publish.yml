@@ -12,6 +12,9 @@ permissions:
 env:
   UPSTREAM_REPOSITORY: 4thfever/cultivation-world-simulator
   IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/cultivation-world-simulator
+  GIT_CONFIG_COUNT: 1
+  GIT_CONFIG_KEY_0: init.defaultBranch
+  GIT_CONFIG_VALUE_0: main
 
 jobs:
   publish:
